@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [longitude, latitude]
+      },
+      "properties": {
+        "name": "Location Name",
+        "description": "Description of the location"
+      }
+    },
+    // Add more features as needed
+  ]
+}
