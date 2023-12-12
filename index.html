@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>카카오 지도</title>
-
-	
-	<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src = "kakaoMpa.js"></script>
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My GitHub Map</title>
+  <!-- Include your chosen mapping library -->
+  <!-- Example with Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-	<div id = "map" style = "width:600px; height:600px;">
-		<script type = "text/javascript" src="d479cd0781a238b00ab82c569cb9ffe0"></script>
-	</div>
+  <div id="map" style="height: 400px;"></div>
+  <!-- Include your mapping library script -->
+  <!-- Example with Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize your map and add GeoJSON data
+    var map = L.map('map').setView([latitude, longitude], zoom);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    // Add GeoJSON layer
+    L.geoJSON(yourGeoJSONData).addTo(map);
+  </script>
 </body>
 </html>
